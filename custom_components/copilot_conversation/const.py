@@ -16,7 +16,7 @@ CONF_CONTINUE_CONVERSATION = "continue_conversation"
 # ---------------------------------------------------------------------------
 # Defaults
 # ---------------------------------------------------------------------------
-DEFAULT_MODEL = "openai/gpt-4.1"
+DEFAULT_MODEL = "gpt-4.1"
 DEFAULT_MAX_TOKENS = 1024
 DEFAULT_TEMPERATURE = 0.7
 DEFAULT_CONTINUE_CONVERSATION = False
@@ -28,22 +28,6 @@ DEFAULT_PROMPT = (
     "Today is {{ now().strftime('%A, %B %d, %Y') }}."
 )
 
-# ---------------------------------------------------------------------------
-# Available chat models (publisher/model format)
-# Ordered by suitability for home automation
-# ---------------------------------------------------------------------------
-CHAT_MODELS = [
-    "openai/gpt-4.1",
-    "openai/gpt-4.1-mini",
-    "openai/gpt-4.1-nano",
-    "openai/gpt-4o",
-    "openai/gpt-4o-mini",
-    "openai/o4-mini",
-    "anthropic/claude-sonnet-4",
-    "mistral-ai/mistral-small",
-    "meta/llama-3.3-70b-instruct",
-    "deepseek/deepseek-r1",
-]
 
 # ---------------------------------------------------------------------------
 # API & OAuth
