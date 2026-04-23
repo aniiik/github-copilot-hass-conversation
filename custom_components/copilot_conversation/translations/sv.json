@@ -1,0 +1,48 @@
+{
+  "title": "GitHub Copilot Konversation",
+  "config": {
+    "step": {
+      "choose_model": {
+        "title": "Välj AI-modell",
+        "description": "Välj vilken AI-modell som ska användas för konversationer. Du kan ändra detta senare i integrationens inställningar.",
+        "data": {
+          "model": "AI-modell"
+        },
+        "data_description": {
+          "model": "Vilken modell som ska användas via GitHub Copilot. Format: utgivare/modell (t.ex. openai/gpt-4.1). Du kan också skriva ett eget modellnamn."
+        }
+      }
+    },
+    "progress": {
+      "wait_for_device": "Öppna [{url}]({url}) och ange den här koden för att auktorisera:\n```\n{code}\n```"
+    },
+    "abort": {
+      "already_configured": "GitHub Copilot Konversation är redan konfigurerat.",
+      "could_not_register": "Kunde inte ansluta till GitHub för auktorisering. Försök igen.",
+      "reauth_successful": "Omautentisering lyckades."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Inställningar för GitHub Copilot Konversation",
+        "data": {
+          "model": "AI-modell",
+          "prompt": "Systemprompt",
+          "llm_hass_api": "Styr Home Assistant",
+          "temperature": "Temperatur (kreativitet)",
+          "max_tokens": "Maximalt antal token i svar",
+          "continue_conversation": "Aktivera konversationer och lyssna på svar (Experimentellt)"
+        },
+        "data_description": {
+          "model": "Vilken modell som ska användas via GitHub Copilot. Format: utgivare/modell (t.ex. openai/gpt-4.1). Du kan också skriva ett eget modellnamn.",
+          "prompt": "Instruktioner för AI:n. Stöder Jinja2-mallar med {{ ha_name }}, {{ now() }} osv.",
+          "llm_hass_api": "Välj vilka Home Assistant-API:er som AI:n kan använda för att styra dina enheter. 'Assist' exponerar samma enheter som den inbyggda röstassistenten.",
+          "temperature": "0 = deterministisk, 2 = kreativ. OpenAI-intervall: 0.0–2.0.",
+          "max_tokens": "Maximal längd på AI:ns svar i antal token.",
+          "continue_conversation": "När aktiverat fortsätter assistenten automatiskt att lyssna efter ett svar som slutar med en fråga. Experimentellt: beteendet kan variera beroende på satellit."
+        }
+      }
+    }
+  }
+}

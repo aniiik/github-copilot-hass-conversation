@@ -1,0 +1,48 @@
+{
+  "title": "GitHub Copilot Conversation",
+  "config": {
+    "step": {
+      "choose_model": {
+        "title": "Choose AI model",
+        "description": "Select the AI model to use for conversations. You can change this later in the integration options.",
+        "data": {
+          "model": "AI model"
+        },
+        "data_description": {
+          "model": "Which model to use via GitHub Copilot. Format: publisher/model (e.g. openai/gpt-4.1). You can also type a custom model name."
+        }
+      }
+    },
+    "progress": {
+      "wait_for_device": "Open [{url}]({url}) and enter this code to authorize:\n```\n{code}\n```"
+    },
+    "abort": {
+      "already_configured": "GitHub Copilot Conversation is already configured.",
+      "could_not_register": "Could not connect to GitHub for authorization. Please try again.",
+      "reauth_successful": "Re-authentication successful."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "GitHub Copilot Conversation settings",
+        "data": {
+          "model": "AI model",
+          "prompt": "System prompt",
+          "llm_hass_api": "Control Home Assistant",
+          "temperature": "Temperature (creativity)",
+          "max_tokens": "Maximum tokens in response",
+          "continue_conversation": "Enable conversations and listen to responses (Experimental)"
+        },
+        "data_description": {
+          "model": "Which model to use via GitHub Copilot. Format: publisher/model (e.g. openai/gpt-4.1). You can also type a custom model name.",
+          "prompt": "Instructions for the AI. Supports Jinja2 templates with {{ ha_name }}, {{ now() }} etc.",
+          "llm_hass_api": "Select which Home Assistant APIs the AI can use to control your devices. 'Assist' exposes the same entities as the built-in voice assistant.",
+          "temperature": "0 = deterministic, 2 = creative. OpenAI range: 0.0-2.0.",
+          "max_tokens": "Maximum length of the AI response in tokens.",
+          "continue_conversation": "When enabled, the assistant automatically keeps listening after a response that ends with a question. Experimental: behaviour may vary by satellite."
+        }
+      }
+    }
+  }
+}

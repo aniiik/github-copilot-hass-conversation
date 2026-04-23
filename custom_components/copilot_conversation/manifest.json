@@ -1,0 +1,14 @@
+{
+  "domain": "copilot_conversation",
+  "name": "GitHub Copilot Conversation",
+  "codeowners": [
+    "@aniiik"
+  ],
+  "config_flow": true,
+  "documentation": "https://github.com/aniiik/github-copilot-hass-conversation",
+  "integration_type": "service",
+  "iot_class": "cloud_polling",
+  "quality_scale": "platinum",
+  "requirements": [],
+  "version": "0.1.0"
+}
